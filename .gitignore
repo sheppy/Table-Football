@@ -1,0 +1,6 @@
+.idea
+node_modules
+atlassian-ide-plugin.xml
+*.js
+*.map
+*.css
