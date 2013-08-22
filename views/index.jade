@@ -1,7 +1,21 @@
 extends layout
 
 block content
-    .row
-        .twelve.columns
+
+    .jumbotron
+        .container
             h1= title
-            p Welcome to #{title}
+
+    .container
+        if players
+            h2 Players
+
+            table.table.table-striped
+                thead: tr
+                    th Name
+                    th Email
+                tbody
+                    for player in players
+                        tr
+                            td= player.name
+                            td= player.email
