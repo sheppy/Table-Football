@@ -1,3 +1,5 @@
-# GET home page.
-exports.index = (req, res) ->
-    res.render("index", { title: "Table Football" })
+module.exports = (app) ->
+
+    # GET home page.
+    app.get "/", (req, res) ->
+        res.render("index", { title: "Table Football" })
