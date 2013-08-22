@@ -4,18 +4,7 @@ block content
 
     .jumbotron
         .container
-            h1= title
+            h1 Table Football
 
     .container
-        if players
-            h2 Players
-
-            table.table.table-striped
-                thead: tr
-                    th Name
-                    th Email
-                tbody
-                    for player in players
-                        tr
-                            td= player.name
-                            td= player.email
+        a(href="/players") Players

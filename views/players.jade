@@ -1,0 +1,23 @@
+extends layout
+
+block content
+
+    .jumbotron
+        .container
+            h1 Table Football
+
+    .container
+        if players
+            h2 Players
+
+            p: a.btn.btn-primary(href="/players/add") Add new player
+
+            table.table.table-striped
+                thead: tr
+                    th Name
+                    th Email
+                tbody
+                    for player in players
+                        tr
+                            td= player.name
+                            td= player.email

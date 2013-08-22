@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+
+    .jumbotron
+        .container
+            h1 Table Football
+
+    .container
+        h2 Add Player
+
+        if error
+            .alert.alert-danger
+                | There was an error
+
+        .row
+            .col-lg-4
+                form(method="post")
+                    .form-group
+                        label(for="name") Name
+                        input(type="text", class="form-control", name="name", id="name", placeholder="Enter name")
+
+                    .form-group
+                        label(for="email") Email
+                        input(type="email", class="form-control", name="email", id="email", placeholder="Email address")
+
+                    button.btn.btn-primary.pull-right(type="submit") Add player
