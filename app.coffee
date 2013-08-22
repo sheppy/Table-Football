@@ -2,6 +2,7 @@ express = require "express"
 http = require "http"
 path = require "path"
 stylus = require "stylus"
+require "./lib/database"
 
 app = express()
 
